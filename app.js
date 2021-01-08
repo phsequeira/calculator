@@ -1,37 +1,25 @@
-//const for addition
+//imports
+import { myAddHandler } from './handlers.js';
+import { mySubHandler } from './handlers.js';
+import { myMultHandler } from './handlers.js';
+import { myDivideHandler } from './handlers.js';
+import { myConvertionHandler } from './handlers.js';
+//buttons
 const addButton = document.getElementById('addButton');
-const addAnswer = document.getElementById('addAnswer');
-const addX = document.getElementById('addX');
-const addY = document.getElementById('addY');
-//const for subtraction
 const subButton = document.getElementById('subButton');
-const subAnswer = document.getElementById('subAnswer');
-const subX = document.getElementById('subX');
-const subY = document.getElementById('subY');
-//const for multiplcation
 const multButton = document.getElementById('multButton');
-const multAnswer = document.getElementById('multAnswer');
-const multX = document.getElementById('multX');
-const multY = document.getElementById('multY');
-//const for division
 const divideButton = document.getElementById('divideButton');
-const divideAnswer = document.getElementById('divideAnswer');
-const divideX = document.getElementById('divideX');
-const divideY = document.getElementById('divideY');
+const convertButton = document.getElementById('convertButton');
 
 //addition equation
-addButton.addEventListener('click', () => {
-    addAnswer.textContent = ((addX.value * 1) + (addY.value * 1));
-});
+addButton.addEventListener('click', myAddHandler);
 //subtraction equation
-subButton.addEventListener('click', () => {
-    subAnswer.textContent = subX.value - subY.value;
-});
+subButton.addEventListener('click', mySubHandler);
 //multiplication equation
-multButton.addEventListener('click', () => {
-    multAnswer.textContent = multX.value * multY.value;
-});
+multButton.addEventListener('click', myMultHandler);
+
 //division equation
-divideButton.addEventListener('click', () => {
-    divideAnswer.textContent = divideX.value / divideY.value;
-});
+divideButton.addEventListener('click', myDivideHandler);
+
+//Celsius to Fahrenheit function print
+convertButton.addEventListener('click', myConvertionHandler);
